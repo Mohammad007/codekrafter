@@ -1,0 +1,108 @@
+.erp-boxs-cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.erp-heading{
+    width: 100%;
+    /* margin: 0 20px; */
+}
+
+.dharma-bg{
+    height: 950%;
+}
+
+.erp-boxs-cont h6{
+padding: 10px 0;
+}
+
+.erp-boxs-cont .left-erp-bx:hover{
+    box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+transform: scale(1.1);
+transition: all .3s;
+cursor: pointer;
+}
+
+.erp-boxs-cont .left-erp-bx:hover + h6{
+/* font-weight: bold; */
+}
+
+
+
+/* ///////////////// */
+/* .left-erp-bx,
+.right-erp-bx,
+.top-erp-bx,
+.bottom-erp-bx
+:hover {
+    box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+transform: scale(1.1);
+transition: all .3s;
+cursor: pointer;
+
+} */
+
+
+/* ///////////////// */
+
+
+
+
+@media only screen and (min-width: 1000px) {
+    .erp-responsive{
+        border: 10px solid red;  
+        display: none;      
+        }
+
+}
+
+@media only screen and (max-width: 999px) {
+    .erp-desktop{
+        border: 10px solid red;  
+        display: none;      
+        }
+    
+
+}
+
+
+
+.left-erp-bx, .right-erp-bx, .top-erp-bx, .bottom-erp-bx:hover{
+
+
+    
+}
+
+.left-erp-bx:hover, 
+.right-erp-bx:hover, 
+.top-erp-bx:hover, 
+.bottom-erp-bx:hover{
+    /* background: rgb(41, 52, 120 ,.8); */
+    width: 110px;
+    height: 110px;
+    /* border-radius: 10px; */
+    box-shadow: rgb(41, 52, 120) 0px 5px 15px;
+    border: .05px solid gainsboro;
+    transform: scale(1.1);
+
+}
+
+/* Add this CSS to your stylesheet */
+.nav-item:hover .dropdown-menu {
+    display: block !important; /* Show the dropdown menu on hover */
+  }
+.nav-link a{
+    color: #000;
+}  
+
+
+.nav-item:hover .dropdown-menu.show{
+/* border: red solid 5px; */
+display: block;
+}
+
+

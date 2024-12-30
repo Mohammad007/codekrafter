@@ -1,0 +1,128 @@
+.membership-plan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--color1);
+    padding: 20px;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .membership-h {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 2px solid yellow; */
+    background-color: var(--color1);
+    color: #333;
+    color: var(--color3);
+    font-weight: bold;
+    margin: 0px;
+    padding: 15px;
+    
+  }
+  
+  .membership-option {
+    background-color: #fff;
+    /* background-color: var(--color1); */
+    box-shadow:inset 0 0 5px 0 var(--color2) ;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+  }
+  .membership-option:hover {
+    background: var(--color1);
+    color: #fff;
+    transform: translateY(-3%);
+    border: 1px solid var(--color3);
+  }
+
+  .membership-option.golden:hover{
+      background: linear-gradient(to bottom, #F7CA18, #E9D460);
+      /* background: linear-gradient(to bottom, #FFFACD, #FFF9C4); */
+    }
+    .membership-option.premium:hover{
+        background: linear-gradient(to bottom, rgba(242, 242, 242, 0.8), rgba(255, 255, 255, 0.2));
+        /* background: linear-gradient(to bottom, #caf0f7, #d4e5f3);   */
+        /* background: linear-gradient(to bottom, #a9adbf, #8ab0b1); */
+
+        /* background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%); */
+
+
+
+    }
+
+ 
+
+  
+  .membership-option h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .membership-option p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .membership-option ul {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .membership-option li {
+    margin-bottom: 5px;
+  }
+  
+  .membership-option .price {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .membership-option button {
+    background-color: var(--color3);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  @media (min-width: 768px) {
+    .membership-option {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    
+    .membership-option:last-child {
+      margin-bottom: 0;
+    }
+  
+    .membership-option .price {
+      margin-bottom: 0;
+    }
+    
+    .membership-option button {
+      max-width: none;
+      margin-left: 20px;
+      width: auto;
+    }
+  }
+  
+
+  /* ////////////////// */
+  

@@ -1,0 +1,100 @@
+import React, { useState } from 'react';
+import photo from './photo.jpg';
+// import DropdownMenu from './DropdownMenu'; // Import the DropdownMenu component
+
+const DropdownMenu = () => {
+  const [activeLinkOne, setActiveLinkOne] = useState('');
+  const [activeLinkTwo, setActiveLinkTwo] = useState('');
+  const [activeLinkThree, setActiveLinkThree] = useState('');
+  const [expandedMenuIndex, setExpandedMenuIndex] = useState(0);
+
+  const goToSlide = (index) => {
+    // Implement the logic to navigate to the specified slide
+    console.log('Navigating to slide', index);
+  };
+
+  const handleLinkClickOne = (link) => {
+    setActiveLinkOne(link);
+  };
+
+  const handleLinkClickTwo = (link) => {
+    setActiveLinkTwo(link);
+  };
+
+  const handleLinkClickThree = (link) => {
+    setActiveLinkThree(link);
+  };
+
+  const handleMenuClick = (index) => {
+    setExpandedMenuIndex(index === expandedMenuIndex ? null : index);
+  };
+
+  const handleClick1 = () => {
+    goToSlide(0);
+  };
+
+  const handleClick2 = () => {
+    goToSlide(1);
+  };
+
+  const handleClick3 = () => {
+    goToSlide(2);
+  };
+
+  const handleClick4 = () => {
+    goToSlide(3);
+  };
+
+  const handleClicks = [handleClick1, handleClick2, handleClick3, handleClick4];
+
+  return (
+    <div className="intro">
+      <div style={{ alignSelf: 'baseline' }}>
+        <DropdownMenu
+          heading="Website Modules"
+          items={[
+            'Authentication Modules',
+            'Home Page',
+            'Product Page',
+            'Shopping Cart',
+            'Checkout',
+            'User Account',
+            'Customer Support',
+            'Site Functionality',
+          ]}
+          activeLink={activeLinkOne}
+          handleLinkClick={handleClicks}
+          isExpanded={expandedMenuIndex === 0}
+          handleClick={() => handleMenuClick(0)}
+          goToSlide={goToSlide} // Pass the goToSlide function as a prop
+        />
+        <DropdownMenu
+          heading="Admin"
+          items={['Hello1', 'Hello2', 'Hello3', 'Hello4']}
+          activeLink={activeLinkTwo}
+          handleLinkClick={handleLinkClickTwo}
+          isExpanded={expandedMenuIndex === 1}
+          handleClick={() => handleMenuClick(1)}
+          goToSlide={goToSlide} // Pass the goToSlide function as a prop
+        />
+        <DropdownMenu
+          heading="Third Party Integration"
+          items={['Hello1', 'Hello2', 'Hello3', 'Hello4']}
+          activeLink={activeLinkThree}
+          handleLinkClick={handleLinkClickThree}
+          isExpanded={expandedMenuIndex === 2}
+          handleClick={() => handleMenuClick(2)}
+          goToSlide={goToSlide} // Pass the goToSlide function as a prop
+        />
+      </div>
+
+      <div>
+        <div className="photo" style={{ alignSelf: 'flex-start' }}>
+          <img src={photo} alt="" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DropdownMenu;

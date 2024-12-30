@@ -1,0 +1,71 @@
+/* General styles for the breadcrumb and back button */
+.breadcrumb {
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0; /* Removed background box padding */
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  padding: 0; /* Removed padding to eliminate background box effect */
+  margin-right: 5px;
+}
+
+.breadcrumb-item > span {
+  margin: 0 3px;
+  color: #6c757d;
+}
+
+/* Removed background and rounded corners from breadcrumb items */
+.breadcrumb-item > a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.back-button-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent; /* Removed background box from the back button container */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: none; /* Removed shadow */
+  position: sticky;
+}
+
+.back-button {
+  padding: 0;
+  border: none;
+  background: none;
+  margin-right: 10px;
+}
+
+.back-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .breadcrumb-container {
+    display: none; /* Hides breadcrumbs on small screens */
+  }
+
+  .back-button-container {
+    justify-content: flex-start; /* Keeps the arrow on the left side */
+    margin-left: 0; /* Adjusts the margin for smaller screens */
+  }
+
+  /* Center the arrow if needed when breadcrumbs are hidden */
+  .back-button {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
